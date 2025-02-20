@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function GetTable(){
+            let str="";
+            let a=document.getElementById("value").value;
+            for(let i=1;i<=10;i++)
+            {
+            str +=`${a} x ${i} = ${a*i}<br>`
+            }
+            root.innerHTML=str
+        }
+    </script>
+</head>
+<body>
+    <p><input type="number" id="value" onchange="GetTable()" placeholder="Enter a number"></p>
+   <button onclick=GetTable()>Get Table</button>
+   <hr>
+    <div id="root"></div>
+</body>
+</html>
